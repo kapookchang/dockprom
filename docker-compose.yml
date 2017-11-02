@@ -123,3 +123,13 @@ services:
       - monitor-net
     labels:
       org.label-schema.group: "monitoring"
+
+  golang:
+    build: go/
+    container_name: go
+    ports:
+      - 8080:8080
+    networks:
+      - monitor-net
+    labels:
+      org.label-schema.group: "monitoring"
